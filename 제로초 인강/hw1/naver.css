@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-#header-center {
+.center-align {
   margin: 0 auto;
   width: 1080px;
 }
@@ -83,4 +83,51 @@
   height: 40px;
   display: inline-block;
   margin: -7px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; /*no 동그라미 */
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li span:first-child {
+  height: 16px;
+  background-image: url(sp_nav.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+nav li:first-child span:first-child {
+  /* 첫번째와 마지막만 특별! */
+  width: 25px;
+  background-position: 0 -285px;
+}
+
+nav li:nth-child(2) span:first-child {
+  width: 27px;
+  background-position: -279px -52px;
+}
+
+nav li:nth-child(3) span:first-child {
+  width: 40px;
+  background-position: -100px -182px;
+}
+
+nav li:nth-child(4) span:first-child {
+  width: 40px;
+  background-position: -101px -156px;
+}
+
+nav li:nth-child(5) span:first-child {
+  width: 26px;
+  background-position: -279px -156px;
+}
+
+nav li:nth-child(6) span:first-child {
+  width: 25px;
+  background-position: -70px -285px;
 }
