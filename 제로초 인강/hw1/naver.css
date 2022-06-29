@@ -1,3 +1,8 @@
+* {
+  /* '*' indicates all tags */
+  box-sizing: border-box;
+}
+
 #header-center {
   margin: 0 auto;
   width: 1080px;
@@ -30,10 +35,17 @@
 #header-search fieldset {
   margin-left: 20px;
   padding: 12px 0 12px 10px; /* 위 오 아 왼쪽 */
-  border: 2px solid #03cf5d;
+  border: 2px solid #03cf5d; /*hex*/
   width: 529px;
   height: 49px;
   display: inline-block;
+}
+
+#header-search fieldset input {
+  border: none;
+  padding: 0;
+  outline: none;
+  vertical-align: middle;
 }
 
 .blind {
