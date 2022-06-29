@@ -3,6 +3,15 @@
   box-sizing: border-box;
 }
 
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
 #header-center {
   margin: 0 auto;
   width: 1080px;
@@ -48,11 +57,20 @@
   vertical-align: middle;
 }
 
-.blind {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
+#header-search fieldset button {
+  width: 49px;
+  height: 49px;
+  border: none;
+  padding: 0;
+  background: #03cf5d;
+}
+
+#search-image {
+  background-image: url(https://s.pstatic.net/static/www/img/uit/2021/sp_main_57f073.png);
+  background-position: -838px -415px;
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+  margin: -7px;
 }
