@@ -2,15 +2,45 @@
   margin: 0 auto;
   width: 1080px;
 }
-#header-search > h1 {
-  /*자식 선택자 */
-  width: 280px;
-  display: inline-block;
+
+#header-search a {
+  text-decoration: none;
 }
+
+#header-search h1 {
+  /*자식 선택자 */
+  width: 234px;
+  height: 50px;
+  top: -5px;
+  left: 1px;
+  display: inline-block;
+  background-image: url(https://s.pstatic.net/static/www/img/uit/2021/sp_main_57f073.png);
+  background-position: 0 -161px;
+  background-size: 472px 440px;
+  background-repeat: no-repeat;
+  vertical-align: middle; /* allows the search bar to be centered vertically */
+  overflow: hidden;
+  text-indent: 100%;
+}
+
 #header-search h2 {
   display: none;
 }
+
 #header-search fieldset {
-  width: 520px;
+  margin-left: 20px;
+  padding: 12px 0 12px 10px; /* 위 오 아 왼쪽 */
+  border: 2px solid 03cf5d;
+  width: 529px;
+  height: 49px;
   display: inline-block;
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
 }
