@@ -100,11 +100,15 @@ nav li span:first-child {
   background-image: url(sp_nav.png);
   background-repeat: no-repeat;
   display: inline-block;
+  margin-left: 14px;
 }
+
 nav li:first-child span:first-child {
-  /* 첫번째와 마지막만 특별! */
+  /* first is the exception */
   width: 25px;
   background-position: 0 -285px;
+  margin-left: 0; /* if only one is different, repetitive code --> 공통 part, 
+  specify the one that's DIFFERENT */
 }
 
 nav li:nth-child(2) span:first-child {
