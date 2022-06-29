@@ -3,6 +3,14 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Dotum, "돋움", Helvetica, "Apple SD Gothic Neo", sans-serif;
+  /* 맨 앞부터 있는 애로 font */
+}
+
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -21,6 +29,10 @@
   width: 1080px;
 }
 
+header {
+  height: 170px;
+}
+
 #header-top {
   float: right;
 }
@@ -34,6 +46,7 @@
 
 #header-search {
   clear: both;
+  padding-top: 23px;
 }
 
 #header-search a {
@@ -43,19 +56,16 @@
 #header-search h1 {
   /*자식 선택자 */
   width: 234px;
-  height: 50px;
-  top: -5px;
-  left: 1px;
+  height: 52px;
   display: inline-block;
   background-image: url(https://s.pstatic.net/static/www/img/uit/2021/sp_main_57f073.png);
   background-position: 0 -161px;
   background-size: 472px 440px;
   background-repeat: no-repeat;
-  vertical-align: middle; /* allows the search bar to be centered vertically */
+  vertical-align: middle;
   overflow: hidden;
-  text-indent: 100%;
   position: relative;
-  top: -7px;
+  top: -26px;
 }
 
 #header-search h2 {
@@ -63,14 +73,16 @@
 }
 
 #header-search fieldset {
-  margin-left: 20px;
-  padding: 12px 0 12px 10px; /* 위 오 아 왼쪽 */
-  border: 2px solid #03cf5d; /*hex*/
-  width: 529px;
-  height: 49px;
+  margin-left: 16px;
+  padding: 12px 0 12px 10px;
+  border: 2px solid #03cf5d;
+  width: 584px;
+  height: 57px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
+  left: 4px;
+  top: -21px;
 }
 
 #header-search fieldset input {
@@ -84,8 +96,8 @@
 }
 
 #header-search fieldset button {
-  width: 49px;
-  height: 49px;
+  width: 53px;
+  height: 57px;
   border: none;
   padding: 0;
   background: #03cf5d;
@@ -98,16 +110,23 @@
   background-image: url(https://s.pstatic.net/static/www/img/uit/2021/sp_main_57f073.png);
   background-position: -840px -416px;
   background-repeat: no-repeat;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 46px;
   display: inline-block;
-  margin: -7px;
+  margin: 5px;
+}
+
+nav {
+  height: 46px;
+  border-top: 1px solid #f1f3f6;
+  border-bottom: 1px solid #d1d8e4;
 }
 
 nav ul {
   margin: 0;
-  padding: 0;
+  padding: 16px 0 0 4px;
   list-style: none; /*no 동그라미 */
+  display: inline-block;
 }
 
 nav li {
@@ -153,4 +172,25 @@ nav li:nth-child(5) span:first-child {
 nav li:nth-child(6) span:first-child {
   width: 25px;
   background-position: -70px -285px;
+}
+
+.nav-divider {
+  float: left;
+  margin: 18px 16px 0;
+  width: 1px;
+  height: 14px;
+  background: #ebeef3;
+  display: inline-block;
+}
+
+#search-ranking {
+  position: absolute;
+  top: 16px;
+  right: 100px;
+}
+
+#rank-number {
+  margin-top: -9px;
+  color: #00ab33;
+  font-size: 16px;
 }
