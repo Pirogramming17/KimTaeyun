@@ -12,9 +12,28 @@
   overflow: hidden;
 }
 
+.relative {
+  position: relative;
+}
+
 .center-align {
   margin: 0 auto;
   width: 1080px;
+}
+
+#header-top {
+  float: right;
+}
+
+#header-top span {
+  color: #888;
+  letter-spacing: -1px; /* space between letters */
+  font-size: 11px;
+  line-height: 22px; /* vertical size 유지(중심이 커져도 같은 line) */
+}
+
+#header-search {
+  clear: both;
 }
 
 #header-search a {
