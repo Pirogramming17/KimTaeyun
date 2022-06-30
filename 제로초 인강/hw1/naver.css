@@ -215,3 +215,12 @@ nav li:nth-child(6) span:first-child {
   color: #00ab33;
   font-size: 16px;
 }
+
+main {
+  background-color: #f2f4f7;
+  overflow: auto;
+}
+
+main h3:nth-of-type(2) {
+  background: red;
+}
