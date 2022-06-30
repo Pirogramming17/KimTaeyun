@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap");
+
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -5,4 +7,29 @@
   height: 1px;
   margin: -1px;
   overflow: hidden;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans Mono", monospace;
+  background-color: #212124;
+  color: white; /* font color */
+}
+
+menu-header ul {
+  margin: 0;
+  padding: 16px 0 0 4px;
+  list-style: none;
+  display: inline-block;
+}
+
+menu-header li {
+  display: inline-block;
+}
+
+bottom {
+  background-color: white; /* TODO not working */
+  float: right;
 }

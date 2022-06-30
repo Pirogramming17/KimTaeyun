@@ -4,42 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>GitHub</title>
+    <link rel="stylesheet" href="./github.css" />
   </head>
   <body>
-    <header>
-      <img href="" />
+    <menu-header>
+      <img href="" /> <!--TODO logo-->
       <ul>
         <li>
-          <span class="blind">Why GitHub? </span>
+          <span>Why GitHub? </span> <!--TODO should add the 늘어놓기 button thingy idk-->
         </li>
         <li>
-          <span class="blind">Team</span>
+          <span>Team</span>
         </li>
         <li>
-          <span class="blind">Enterprise</span>
+          <span>Enterprise</span>
         </li>
         <li>
-          <span class="blind">Explore</span>
+          <span>Explore</span>
         </li>
         <li>
-          <span class="blind">Marketplace</span>
+          <span>Marketplace</span>
         </li>
         <li>
-          <span class="blind">Pricing</span>
+          <span">Pricing</span>
         </li>
         <div id="header-top">
           <h2></h2>
           <legend class="blind">Search GitHub</legend>
           <input />
-          <span>Sign in</span>
-          <button>Sign Up</button>
+          <button>Sign in</button>
+          <button>Sign up</button>
         </div>
       </ul>
-    </header>
-    <gitPage>
-      <button>arrows</button>
-      <div>
+    </menu-header>
+    <!--START OF THE SIGN UP PAGE-->
+      <div id="git-page">
+        <!--START OF THE LEFT INTRODUCTION PAGE-->
         <h1>Built for developers</h1>
         <h3>
           GitHub is a development platform inspired by the way you work. From
@@ -47,34 +48,33 @@
           projects, and build software alongside 50 million developers.
         </h3>
       </div>
+      <!--START OF THE SIGN-UP FIELD-->
       <div>
-        signup-page
-        <legend>Username</legend>
-        <legend>Email</legend>
-        <legend>Password</legend>
-        <h6>
-          Make sure it's at least 15 characters OR at least 8 characters
-          including a number and a lowercase letter.
-        </h6>
-        <h6 href="">Learn more.</h6>
-        <button>Sign up for GitHub</button>
-        <h6>
-          By clicking "Sign up the GitHub," you agree to our Terms of Service
-          and Privacy Statement. We'll occasionally send you account related
-          emails.
-        </h6>
+        <fieldset>
+          <legend>Sign-up page</legend>
+          <legend>Username</legend>
+          <input />
+          <legend>Email</legend>
+          <input />
+          <legend>Password</legend>
+          <input />
+          <h6>
+            Make sure it's at least 15 characters OR at least 8 characters
+            including a number and a lowercase letter.
+          </h6>
+          <h6 href="">Learn more.</h6>
+          <button>Sign up for GitHub</button>
+          <h6>
+            By clicking "Sign up the GitHub," you agree to our Terms of Service
+            and Privacy Statement. We'll occasionally send you account related
+            emails.
+          </h6>
+        </fieldset>
       </div>
-      <button>arrows</button>
-    </gitPage>
-    <!-- <fieldset>
-        <legend>검색</legend>
-        <input />
-        <textarea></textarea>
-        <input type="checkbox" />
-        <!-- unlike checkboxes, you can't choose both if in the same group for radios-->
-    <!-- <input type="radio" name="group" />
-        <input type="radio" name="group" />
-        <button>검색</button>
-      </fieldset> -->
+    </git-page>
+    <!--START OF THE DIFFERENT-COLR PART-->
+    <bottom>
+      <img src="./image.jpeg"> image here /img>
+    </bottom>
   </body>
 </html>
