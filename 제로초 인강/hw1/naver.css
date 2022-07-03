@@ -196,7 +196,6 @@ nav li:nth-child(6) span:first-child {
 }
 
 .nav-divider {
-  float: left;
   margin: 18px 16px 0;
   width: 1px;
   height: 14px;
