@@ -1,0 +1,341 @@
+<!--Things that are not working 1) The icons 2) About 3) Lines for the footer rip me :-( -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><span class="text-white">Pirogramming</span></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  ><span class="text-primary">Makyra Kim</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#intro"
+                  ><span class="text-white">Intro</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#highlights"
+                  ><span class="text-white">Highlights</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#gallery"
+                  ><span class="text-white">Gallery</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#contact"
+                  ><span class="text-white">Contact</span></a
+                >
+              </li>
+            </ul>
+            <form class="d-flex" role="About">
+              <a
+                href="#"
+                class="btn btn-outline-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#modal1"
+                >About</a
+              >
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="modal1"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content align-items-center">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        피로그래밍 17기
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body align-items-center align-text-center">
+                      <h4>파이팅!</h4>
+                      <p class="text-center">
+                        모두들 방학에 수고가 많습니다ㅠㅠ 다들 남은 세션도
+                        화이팅!!!
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-link"
+                        data-bs-dismiss="modal"
+                      >
+                        Download
+                      </button>
+                      <button type="button" data-bs-dismiss="modal" class="btn btn-primary">Ok</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--End of modal stuff-->
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!--FIRST PAGE-->
+      <div
+        class="container vh-100 d-flex flex-column justify-content-center align-items-center"
+        id="first-page"
+      >
+        <h2 class="align-text-center fw-bold">Pirogramming17</h2>
+        <h6 class="fw-bold">Cheer up</h6>
+        <div class="w-100 mt-3 mb-2 border-bottom border-2 border-dark"></div>
+        <a href="#intro" class="btn btn-primary">Get Started</a>
+      </div>
+
+      <!--INTRO-->
+      <section
+        id="intro"
+        class="container-fluid vh-100 bg-color-secondary d-flex flex-column align-items-center justify-content-center bg-secondary"
+      >
+        <h2 class="align-text-center d-flex text-danger fw-bold fs-1">
+          Built On the Bootstrap Grid
+        </h2>
+        <h6 class="text-light text-center d-flex col-5">
+          Bootstrap's responsive grid comes in 4 sizes or "breakpoints":
+          tiny(xs), small(sm), medium(md), and large(lg). These 4 grid sizes
+          enables you create responsive layouts that behave accordingly on
+          different sizes.
+        </h6>
+        <a href="#highlights" class="btn btn-light mt-4">Learn more</a>
+      </section>
+
+      <!--HIGHLIGHTS-->
+      <section id="highlights" class="container-fluid bg-dark pt-5 pb-5">
+        <h3 class="d-flex justify-content-center text-primary">
+          Flexible Layouts
+        </h3>
+        <div class="w-100 mt-2 mb-4 border-bottom border-1 border-light"></div>
+        <div class="row">
+          <div id="responsive" class="col-md-4 text-center align-items-center">
+            <h4 class="text-white mt-3">Responsive</h4>
+            <span class="text-white">Your site looks good everywhere</span>
+            <div id="gallery">
+              <img
+                src="https://picsum.photos/seed/picsum/200"
+                class="w-50 mt-5"
+                alt="..."
+              />
+              <img
+                src="https://picsum.photos/seed/picsum4/200"
+                class="w-50 mt-4"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div
+            id="customizable"
+            class="col-md-4 text-center align-items-center"
+          >
+            <h4 class="text-white mt-3">Customizable</h4>
+            <span class="text-white font-size-30%"
+              >Easy to theme and customize with SASS</span
+            >
+            <div>
+              <img
+                src="https://picsum.photos/seed/picsum$/200"
+                class="w-50 mt-5"
+                alt="..."
+              />
+              <img
+                src="https://picsum.photos/seed/picsum5/200"
+                class="w-50 mt-4"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div id="consistent" class="col-md-4 text-center align-items-center">
+            <!--Need help with icons-->
+            <h4 class="text-white mt-3">Consistent</h4>
+            <span class="text-white"
+              >A mature, well-tested, stable codebase</span
+            >
+            <div>
+              <img
+                src="https://picsum.photos/seed/picsum3/200"
+                class="w-50 mt-5"
+                alt="..."
+              />
+              <img
+                src="https://picsum.photos/seed/picsum6/200"
+                class="w-50 mt-4"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--CONTACTS-->
+      <section id="contact" class="container-fluid vh-100 bg-secondary pt-5">
+        <h3 class="d-flex justify-content-center text-primary">Get in Touch</h3>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center bg-secondary"
+        >
+          <div class="w-75 mt-3 mb-5 border-bottom border-2 border-dark"></div>
+        </div>
+        <form>
+          <div class="row align-items-center justify-content-center">
+            <div class="col col-sm-3 text-center align-items-center">
+              <input type="text" class="form-control" placeholder="Name" />
+            </div>
+            <div class="col col-sm-3 text-center align-items-center">
+              <input type="text" class="form-control" placeholder="Email" />
+            </div>
+            <div class="col col-sm-3 text-center align-items-center">
+              <input type="text" class="form-control" placeholder="Phone" />
+            </div>
+          </div>
+          <div
+            class="d-flex flex-column align-items-center justify-content-center mt-3"
+          >
+            <label for="input"></label>
+            <textarea
+              class="form-control w-75"
+              id="inputdefault"
+              type="text"
+              placeholder="Your message here.."
+              rows="10"
+            ></textarea>
+          </div>
+
+          <div
+            class="d-flex flex-column align-items-center justify-content-center"
+            role="Send"
+          >
+            <a
+              href="#"
+              class="btn btn-primary mt-4 w-25"
+              data-bs-toggle="modal"
+              data-bs-target="#modal2"
+              >Send</a
+            >
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="modal2"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content align-items-center">
+                  <div class="modal-header">
+                        <h5
+                        class="modal-title"
+                        id="exampleModalLabel">
+                        Nice-Job!
+                      </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="text-center">
+                      You clicked the button, but it doesn't actually go
+                      anywhere.
+                    </p>
+                    <a href="https://getbootstrap.com/" class="text-primary align-text-center" style="text-decoration:none"> 
+                        <p class="text-center">Learn more at Bootstrap</p>
+                    </a>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-primary mt-4 align-items-center">Ok</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End of modal stuff-->
+        </form>
+      </section>
+      <!--END OF MAIN-->
+    </main>
+    <footer>
+        <section class="vh-25 bg-dark pb-5 ps-5">
+            <form>
+                <div class="row align-items-center justify-content-center">
+                  <span class="col col-sm-4 align-items-center">
+                    <h6 class="text-primary"> Information</h6>
+                    <div class="text-white" style="list-style: none">
+                    <li>Product</li>
+                    <li>Services</li>
+                    <li>Benefits</li>
+                    <li>Developer</li>
+                    </div>
+                  </span>
+                  <span class="col col-sm-4 align-items-center">
+                    <h6 class="text-primary mt-4"> About</h6>
+                    <div class="text-white" style="list-style: none">
+                    <li>Contact Us</li>
+                    <li>Delivery Information</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms & Conditions</li>
+                    </div>>
+                  </span>
+                  <span class="col col-sm-4 align-items-center">
+                    <h6 class="text-primary mb-3"> Stay Posted</h6>
+                    <div class="text-white col-sm-6">
+                      <input type="text" class="form-control" placeholder="Tell us your email" />
+                      <button type="button" class="btn btn-primary mt-2">Subscribe for updates</button>
+                    </div>
+                  </span>
+                </div>
+            </form>
+        </section>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
