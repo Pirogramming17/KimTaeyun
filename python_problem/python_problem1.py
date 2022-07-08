@@ -3,6 +3,8 @@ import random
 num = 0
 
 while num < 31:
+    if num == 31:
+        break
     while True:
         # the while True loops allows a block of code to be executed repeatedly until
         # we get a False boolean or a break
@@ -23,6 +25,8 @@ while num < 31:
             print('playerB win!')
             break
 
+    if num == 31:
+        break
     while True:
         # the while True loops allows a block of code to be executed repeatedly until
         # we get a False boolean or a break
