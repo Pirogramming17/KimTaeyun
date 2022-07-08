@@ -1,5 +1,3 @@
-import random
-
 num = 0
 
 while num < 31:
