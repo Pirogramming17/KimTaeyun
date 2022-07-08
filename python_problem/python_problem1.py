@@ -1,10 +1,7 @@
 import random
 
-num = 0
-computer = 0
-player = 0
 
-def brGame(num):
+def brGame():
     while True:
         # the while True loops allows a block of code to be executed repeatedly until
         # we get a False boolean or a break
@@ -20,21 +17,23 @@ def brGame(num):
 
     return numChoice
 
-    def updateStatus(playerName, opponent, num, currNum):
-        for i in range(numChoice):
-            num += 1
-            print(playerName, num, sep='')
-            if num == 31:
-                print(opponent, ' win!', sep='')
-                break
-
-    while num < 31:
+# something to improve ... i don't know how to make parameters work in python ...
+# how to eliminate repetitive code even more?
+num = 0
+while num < 31:
+    # it's the computer's turn
+    numChoice = random.randint(1, 3)
+    for i in range(numChoice):
+        num += 1
+        print('computer : ', num, sep='')
         if num == 31:
-            break
-        # it's the computer's turn
-        currTimes = random.randint(1, 3)
-        updateStatus(computer, player, num, currTimes)
-
-        # player's turn
-        currTimes = brGame(num)
-        updateStatus(player, computer, num, currTimes)
+            print('player win!', sep='')
+            exit()
+    # now it's my turn
+    numChoice = brGame()
+    for i in range(numChoice):
+        num += 1
+        print('player : ', num, sep='')
+        if num == 31:
+            print('computer win!', sep='')
+            exit()
