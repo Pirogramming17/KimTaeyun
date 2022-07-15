@@ -7,7 +7,11 @@
     <title>게시글 올리기</title>
   </head>
   <body>
+    <div>
+      <a href="{% url 'reviews:home' %}"><h3>my Movie reviews</h3></a>
+    </div>
     <form action="/create" method="post">
+      {% csrf_token %}
       <h2>제목: <input type="text" name="title" /></h2>
       <p>
         개봉년도: <input type="text" name="release_yr" /> 장르:

@@ -14,12 +14,10 @@
       <div>
         <h2>{{ review.title }}</h2>
         <div style="display: flex">
-          <a href="{% url 'reviews:update' review.id %}">수정</a>
-          <form
-            action="{% url 'reviews:delete' review.id %}"
-            method="review"
-            style="margin-left: 5px"
-          >
+          <button>
+            <a href="{% url 'reviews:update' review.id %}">수정</a>
+          </button>
+          <form action="{% url 'reviews:delete' review.id %}" method="post">
             {% csrf_token %}
             <button>삭제</button>
           </form>

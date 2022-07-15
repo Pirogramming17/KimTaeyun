@@ -13,6 +13,7 @@
     <form action="/update/{{review.id}}" method="post">
       {% csrf_token %}
       <h2>
+        제목:
         <input
           type="text"
           name="title"
@@ -21,24 +22,28 @@
         />
       </h2>
       <p>
+        개봉년도:
         <input
           type="text"
           name="release_yr"
           placeholder="개봉년도"
           value="{{review.release_yr}}"
         />
+        장르:
         <input
           type="text"
           name="genre"
           placeholder="장르"
           value="{{review.genre}}"
         />
+        별점:
         <input
           type="text"
           name="rating"
           placeholder="별점"
           value="{{review.rating}}"
         />
+        러닝타임:
         <input
           type="text"
           name="running_time"
@@ -46,21 +51,28 @@
           value="{{review.running_time}}"
         />
       </p>
-      <textarea name="content" id="" cols="30" rows="10">
-      {{review.content}}</textarea
-      >
-      <input
-        type="text"
-        name="director"
-        placeholder="감독"
-        value="{{review.director}}"
-      />
-      <input
-        type="text"
-        name="actors"
-        placeholder="배우"
-        value="{{review.actors}}"
-      />
+      <div>
+        리뷰:
+        <textarea name="content" id="" cols="30" rows="10">
+          {{review.content}}</textarea
+        >
+      </div>
+      <p>
+        감독:
+        <input
+          type="text"
+          name="director"
+          placeholder="감독"
+          value="{{review.director}}"
+        />
+        배우:
+        <input
+          type="text"
+          name="actors"
+          placeholder="배우"
+          value="{{review.actors}}"
+        />
+      </p>
       <div>
         <input type="submit" value="Save" />
       </div>
