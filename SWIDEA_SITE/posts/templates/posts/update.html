@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="{% static 'css/update.css' %}" /> -->
+    <title>게시글 올리기</title>
+  </head>
+  <body>
+    <navbar>
+      <div class="logo">
+        <a href="{% url 'posts:home' %}">My SW Idea Manage</a>
+      </div>
+      <a href="{% url 'posts:create' %}"> 아이디어 등록 </a>
+      <a href="{% url 'posts:home' %}"> 아이디어 관리 </a>
+      <a href="{% url 'posts:create' %}"> 개발툴 등록 </a>
+    </navbar>
+
+    <div class="page_title">
+      <h1>Idea Detail Update</h1>
+      <p>
+        아이디어 세부내용 수정 페이지 입니다. 아이디어를 구체화하거나 내용을
+        변경해 보아요.
+      </p>
+    </div>
+
+    <form action="{% url 'posts:update' post.id %}" method="post">
+      {% csrf_token %}
+      <h2>
+        아이디어명:
+        <input
+          type="text"
+          name="title"
+          placeholder="아이디어명"
+          value="{{post.title}}"
+        />
+      </h2>
+      <!-- <p>
+        <input type="file" name="photo" />
+      </p> -->
+      <p>
+        아이디어 설명:
+        <textarea
+          name="description"
+          cols="50"
+          rows="20"
+          value="{{post.description}}"
+        ></textarea>
+      </p>
+
+      <p>
+        아이디어 관심도:
+        <input
+          type="number"
+          name="interest"
+          placeholder="아이디어 관심도"
+          value="{{post.interest}}"
+        />
+      </p>
+      <p>
+        예상 개발툴:
+        <input
+          type="text"
+          name="expected_tool"
+          placeholder="예상 개발툴:"
+          value="{{post.expected_tool}}"
+        />
+      </p>
+
+      <div>
+        <input type="submit" value="제출" />
+      </div>
+    </form>
+    <a href="{% url 'posts:home' %}">Home</a>
+  </body>
+</html>

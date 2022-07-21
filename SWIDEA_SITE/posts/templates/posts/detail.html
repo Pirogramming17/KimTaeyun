@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="{% static 'css/detail.css' %}" /> -->
+    <title>상세화면</title>
+  </head>
+  <body>
+    <navbar>
+      <div class="logo">
+        <a href="{% url 'posts:home' %}">My SW Idea Manage</a>
+      </div>
+      <a href="{% url 'posts:create' %}"> 아이디어 등록 </a>
+      <a href="{% url 'posts:home' %}"> 아이디어 관리 </a>
+      <a href="{% url 'posts:create' %}"> 개발툴 등록 </a>
+    </navbar>
+
+    <div class="page_title">
+      <h1>Idea Detail</h1>
+      <p>
+        아이디어 세부내용 페이지 입니다. 당신이 구현하려 한 아이디어들을 자세히
+        살펴보세요.
+      </p>
+    </div>
+
+    <article>
+      {% if post.photo %}
+      <p>
+        <img src="{{ post.photo.url }}" />
+      </p>
+      {% endif %}
+
+      <h2>{{ post.title }}</h2>
+      <div>
+        <p>1) 아이디어 관심도 {{ post.interest }}</p>
+        <p>2) 예상 개발 툴 {{ post.expected_tool }}</p>
+        <p>3) 아이디어 설명 {{ post.description }}</p>
+      </div>
+      <div></div>
+      <div style="display: flex">
+        <form action="{% url 'posts:delete' post.id %}" method="post">
+          {% csrf_token %}
+          <button>삭제</button>
+        </form>
+        <a href="{% url 'posts:home' %}">목록</a>
+        <a href="{% url 'posts:update' post.id %}">수정</a>
+      </div>
+    </article>
+  </body>
+</html>

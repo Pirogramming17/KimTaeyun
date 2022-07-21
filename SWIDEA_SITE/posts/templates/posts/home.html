@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <title>홈 화면</title>
+  </head>
+  <body style="background-image: url('{% static 'image/sourcecode_.jpg' %}')">
+    <navbar>
+      <div class="logo">
+        <a href="{% url 'posts:home' %}">My SW Idea Manage</a>
+      </div>
+      <a href="{% url 'posts:create' %}"> 아이디어 등록 </a>
+      <a href="{% url 'posts:home' %}"> 아이디어 관리 </a>
+      <a href="{% url 'posts:create' %}"> 개발툴 등록 </a>
+    </navbar>
+
+    <div class="page_title">
+      <h1>Idea List</h1>
+      <p>나의 아이디어를 잊지 말고 기록해보세요</p>
+    </div>
+
+    {% for post in posts %}
+    <article>
+      {% if post.photo %}
+      <p>
+        <img src="{{ post.photo.url }}" />
+      </p>
+      {% endif %}
+
+      <div>
+        <a href="{% url 'posts:detail' post.id %}">
+          <h1>{{post.title}}</h1>
+        </a>
+        <p>예상 개발 툴: {{post.expected_tool}}</p>
+        <!-- TODO: 아이디어 관심도 ajax 이용해서 고치기-->
+        <p>아이디어 관심도: {{post.interest}}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </body>
+</html>
