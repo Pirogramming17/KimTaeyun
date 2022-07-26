@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post</title>
+  </head>
+  <body>
+    <!--게시글 주인 info-->
+    <div class="head__container">
+      <div class="user__img">
+        <img src="" alt="" />
+      </div>
+      <div class="user__info">
+        <div id="user__name">tyk._.mk</div>
+        <div id="user__loc"></div>
+      </div>
+      <div class="menu"></div>
+    </div>
+    <!--포스팅한 사진-->
+    <div class="post__image"></div>
+    <!--포스트 reactions-->
+
+    <!-- <script>
+  const strip = (string) => {
+    return string.replace(/^\s+|\s+$/g, "");
+  };
+
+  const requestLike = new XMLHttpRequest();
+
+  const onClickLike = (id, type) => {
+    const url = "/like_ajax/";
+    requestLike.open("POST", url, true);
+    requestLike.setRequestHeader(
+      "Content-Type",
+      "application/x-www-form-urlencoded"
+    );
+    requestLike.send(JSON.stringify({ id: id, type: type }));
+  };
+
+  requestLike.onreadystatechange = () => {
+    if (requestLike.readyState === XMLHttpRequest.DONE) {
+      if (requestLike.status < 400) {
+        const { id, type } = JSON.parse(requestLike.response);
+        const element = document.querySelector(`.post-id-${id} .post__${type}`);
+        const originHTML = element.innerHTML; // innerHTML 에서 element 로 받아올 0 과 like 이 값을 찾고 저장
+        const [buttonType, num] = strip(originHTML).split(" ");
+        const count = Number(num) + 1; // '0' -> 0 -> 1
+
+        element.innerHTML = `${buttonType} ${count}`;
+      }
+    }
+  };
+</script> -->
+  </body>
+</html>
